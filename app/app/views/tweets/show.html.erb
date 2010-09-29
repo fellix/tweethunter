@@ -1,0 +1,15 @@
+<h4><%= @hunter.th_tag %></h4>
+<p>ID: <%= @hunter._id %></p>
+<% @hunter.tweets.each do |tweet| %>
+<p>
+  <%= image_tag tweet.user.profile_image_url %> - <%= tweet.user.screen_name %><br />
+  <%= tweet.text %>
+</p>
+<hr />
+<% end %>
+
+<% content_for :sidebar do %>
+<ul>
+  <li><%= link_to "Voltar", tweets_path %></li>
+</ul>
+<% end %>

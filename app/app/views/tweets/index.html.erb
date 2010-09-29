@@ -1,0 +1,6 @@
+<h4>Visualizando ultimas buscas</h4>
+
+<% @hunters.each do |hunter| %>
+  <p><%= link_to "#{hunter.th_tag}", tweet_path(hunter) %>
+  </p>
+<% end %>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tweet Hunter App</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div id="wrap">
+<div id="container">
+
+	<div id="header">
+  <h1><%= link_to 'Tweet Hunter', root_url %></h1>
+  <h2>resultados de buscas do twitter</h2>
+	</div>
+	<div id="nav">
+    <ul>
+      <li><%= link_to "Home", root_url %></li>
+  </ul>
+		<br class="clear" />
+	</div>
+	<div id="content">
+		<div class="top-panel">
+		<div>
+		</div></div>
+		<div class="page-wrap">
+			<div class="page">
+      <% if flash[:notice] %>
+			    <p class="notice">
+			        <%= flash[:notice] %>
+			    <p>
+			    <% end %>
+			    <% if flash[:error] %>
+			    <p class="error">
+			        <%= flash[:error] %>
+			    <p>
+			    <% end %>
+			    <% if flash[:warning] %>
+			    <p class="warning">
+			        <%= flash[:warning] %>
+			    <p>
+			    <% end %>
+          <%= yield %>
+        </div>
+          <div class="sidebar">
+          <%= yield :sidebar %>
+            </div>
+			<div class="clear"></div>
+      </div>
+	</div>
+	<div id="footer">
+		<p>&copy; 2010 Rafael Felix. Design: <a href="http://www.spyka.net">spyka webmaster</a> | <a href="http://www.justfreetemplates.com">Free Web Templates</a></p>
+	</div>
+
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+== Tweet Hunter
+Para capturar os dados use o script tweethunter.rb
+informando usuario senha e palavra a buscar, os 5 primeiros registros são armazenados no mongo em localhost
+
+== APP
+Aplicação rails para visualizar os dados
